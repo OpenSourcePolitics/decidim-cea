@@ -20,6 +20,7 @@ module Decidim
     let(:password_confirmation) { password }
     let(:tos_agreement) { "1" }
     let(:birthdate) { "12/12/2021" }
+    let(:postal_code) { "75020" }
 
     let(:attributes) do
       {
@@ -29,7 +30,8 @@ module Decidim
         password: password,
         password_confirmation: password_confirmation,
         tos_agreement: tos_agreement,
-        birthdate: birthdate
+        birthdate: birthdate,
+        postal_code: postal_code
       }
     end
 
@@ -135,6 +137,12 @@ module Decidim
 
     context "when birthdate is not present" do
       let(:birthdate) { nil }
+
+      it { is_expected.to be_invalid }
+    end
+
+    context "when postal_code is not present" do
+      let(:postal_code) { nil }
 
       it { is_expected.to be_invalid }
     end

@@ -48,7 +48,8 @@ module Decidim
         accepted_tos_version: form.current_organization.tos_version,
         locale: form.current_locale,
         extended_data: {
-          birthdate: form.birthdate
+          birthdate: form.birthdate,
+          postal_code: form.postal_code
         }
       )
     end

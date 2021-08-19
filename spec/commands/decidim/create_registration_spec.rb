@@ -17,6 +17,7 @@ module Decidim
         let(:newsletter) { "1" }
         let(:current_locale) { "es" }
         let(:birthdate) { "12/12/2021" }
+        let(:postal_code) { "75020" }
 
         let(:form_params) do
           {
@@ -28,7 +29,8 @@ module Decidim
               "password_confirmation" => password_confirmation,
               "tos_agreement" => tos_agreement,
               "newsletter_at" => newsletter,
-              "birthdate" => birthdate
+              "birthdate" => birthdate,
+              "postal_code" => postal_code
             }
           }
         end
@@ -96,7 +98,8 @@ module Decidim
               accepted_tos_version: organization.tos_version,
               locale: form.current_locale,
               extended_data: {
-                birthdate: form.birthdate
+                birthdate: form.birthdate,
+                postal_code: form.postal_code
               }
             ).and_call_original
 

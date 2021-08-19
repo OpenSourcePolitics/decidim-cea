@@ -25,6 +25,7 @@ describe "Authentication", type: :system do
           check :registration_user_tos_agreement
           check :registration_user_newsletter
           fill_in :registration_user_birthdate, with: "12/12/2021"
+          fill_in :registration_user_postal_code, with: "75020"
           find("*[type=submit]").click
         end
 
@@ -51,6 +52,7 @@ describe "Authentication", type: :system do
           check :registration_user_tos_agreement
           check :registration_user_newsletter
           fill_in :registration_user_birthdate, with: "12/12/2021"
+          fill_in :registration_user_postal_code, with: "75020"
           find("*[type=submit]").click
         end
 
@@ -73,6 +75,7 @@ describe "Authentication", type: :system do
           check :registration_user_tos_agreement
           check :registration_user_newsletter
           fill_in :registration_user_birthdate, with: "12/12/2021"
+          fill_in :registration_user_postal_code, with: "75020"
           find("*[type=submit]").click
         end
 
@@ -541,6 +544,7 @@ describe "Authentication", type: :system do
             check :registration_user_tos_agreement
             check :registration_user_newsletter
             fill_in :registration_user_birthdate, with: "12/12/2021"
+            fill_in :registration_user_postal_code, with: "75020"
             find("*[type=submit]").click
           end
 
