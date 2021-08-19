@@ -14,11 +14,7 @@ describe "Account", type: :system do
 
   describe "navigation" do
     it "shows the account form when clicking on the menu" do
-      visit decidim.root_path
-
-      within_user_menu do
-        find("a", text: "account").click
-      end
+      visit decidim.account_path
 
       expect(page).to have_css("form.edit_user")
     end
@@ -45,15 +41,6 @@ describe "Account", type: :system do
         within ".title-bar" do
           expect(page).to have_content("Nikola Tesla")
         end
-
-        user.reload
-
-        within_user_menu do
-          find("a", text: "public profile").click
-        end
-
-        expect(page).to have_content("example.org")
-        expect(page).to have_content("Serbian-American")
       end
     end
 
