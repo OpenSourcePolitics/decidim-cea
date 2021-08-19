@@ -46,7 +46,10 @@ module Decidim
         newsletter_notifications_at: form.newsletter_at,
         email_on_notification: true,
         accepted_tos_version: form.current_organization.tos_version,
-        locale: form.current_locale
+        locale: form.current_locale,
+        extended_data: {
+          birthdate: form.birthdate
+        }
       )
     end
   end

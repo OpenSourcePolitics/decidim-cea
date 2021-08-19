@@ -24,6 +24,7 @@ describe "Authentication", type: :system do
           fill_in :registration_user_password_confirmation, with: "DfyvHn425mYAy2HL"
           check :registration_user_tos_agreement
           check :registration_user_newsletter
+          fill_in :registration_user_birthdate, with: "12/12/2021"
           find("*[type=submit]").click
         end
 
@@ -49,6 +50,7 @@ describe "Authentication", type: :system do
           fill_in :registration_user_password_confirmation, with: "DfyvHn425mYAy2HL"
           check :registration_user_tos_agreement
           check :registration_user_newsletter
+          fill_in :registration_user_birthdate, with: "12/12/2021"
           find("*[type=submit]").click
         end
 
@@ -70,6 +72,7 @@ describe "Authentication", type: :system do
           fill_in :registration_user_password_confirmation, with: "DfyvHn425mYAy2HL"
           check :registration_user_tos_agreement
           check :registration_user_newsletter
+          fill_in :registration_user_birthdate, with: "12/12/2021"
           find("*[type=submit]").click
         end
 
@@ -537,6 +540,7 @@ describe "Authentication", type: :system do
             fill_in :registration_user_password_confirmation, with: "DfyvHn425mYAy2HL"
             check :registration_user_tos_agreement
             check :registration_user_newsletter
+            fill_in :registration_user_birthdate, with: "12/12/2021"
             find("*[type=submit]").click
           end
 

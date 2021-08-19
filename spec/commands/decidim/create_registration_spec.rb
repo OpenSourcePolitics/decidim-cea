@@ -16,6 +16,7 @@ module Decidim
         let(:tos_agreement) { "1" }
         let(:newsletter) { "1" }
         let(:current_locale) { "es" }
+        let(:birthdate) { "12/12/2021" }
 
         let(:form_params) do
           {
@@ -26,7 +27,8 @@ module Decidim
               "password" => password,
               "password_confirmation" => password_confirmation,
               "tos_agreement" => tos_agreement,
-              "newsletter_at" => newsletter
+              "newsletter_at" => newsletter,
+              "birthdate" => birthdate
             }
           }
         end
@@ -69,7 +71,7 @@ module Decidim
                 user.reload
               end.to change(User, :count).by(0)
                                          .and broadcast(:invalid)
-                                                .and change(user.reload, :invitation_token)
+                .and change(user.reload, :invitation_token)
               expect(ActionMailer::DeliveryJob).to have_been_enqueued.on_queue("mailers")
             end
           end
@@ -92,7 +94,10 @@ module Decidim
               email_on_notification: true,
               organization: organization,
               accepted_tos_version: organization.tos_version,
-              locale: form.current_locale
+              locale: form.current_locale,
+              extended_data: {
+                birthdate: form.birthdate
+              }
             ).and_call_original
 
             expect { command.call }.to change(User, :count).by(1)

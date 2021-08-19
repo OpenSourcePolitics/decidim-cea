@@ -19,6 +19,7 @@ module Decidim
     let(:password) { "S4CGQ9AM4ttJdPKS" }
     let(:password_confirmation) { password }
     let(:tos_agreement) { "1" }
+    let(:birthdate) { "12/12/2021" }
 
     let(:attributes) do
       {
@@ -27,7 +28,8 @@ module Decidim
         email: email,
         password: password,
         password_confirmation: password_confirmation,
-        tos_agreement: tos_agreement
+        tos_agreement: tos_agreement,
+        birthdate: birthdate
       }
     end
 
@@ -121,6 +123,18 @@ module Decidim
 
     context "when the tos_agreement is not accepted" do
       let(:tos_agreement) { "0" }
+
+      it { is_expected.to be_invalid }
+    end
+
+    context "when birthdate has incorrect format" do
+      let(:birthdate) { "Unauthorized format" }
+
+      it { is_expected.to be_invalid }
+    end
+
+    context "when birthdate is not present" do
+      let(:birthdate) { nil }
 
       it { is_expected.to be_invalid }
     end

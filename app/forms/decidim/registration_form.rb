@@ -13,6 +13,7 @@ module Decidim
     attribute :newsletter, Boolean
     attribute :tos_agreement, Boolean
     attribute :current_locale, String
+    attribute :birthdate, String
 
     validates :name, presence: true
     validates :nickname, presence: true, format: /\A[\w\-]+\z/, length: { maximum: Decidim::User.nickname_max_length }
@@ -21,6 +22,7 @@ module Decidim
     validates :password, password: { name: :name, email: :email, username: :nickname }
     validates :password_confirmation, presence: true
     validates :tos_agreement, allow_nil: false, acceptance: true
+    validates :birthdate, format: %r{\A(0?[1-9]|[12][0-9]|3[01])[/](0?[1-9]|1[012])[/\-]\d{4}\z}, presence: true
 
     validate :email_unique_in_organization
     validate :nickname_unique_in_organization
