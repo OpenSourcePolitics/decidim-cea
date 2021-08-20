@@ -42,7 +42,7 @@ fr:
           postal_code: Code postal
           sign_in: S'identifier
           sign_up: S'inscrire
-          subtitle:  Inscrivez-vous pour participer aux discussions et pour exprimer votre soutien aux propositions de votre choix.
+          subtitle: Inscrivez-vous pour participer aux discussions et pour exprimer votre soutien aux propositions de votre choix.
           terms: les termes et conditions d'utilisation.
           tos_agreement: En vous inscrivant, vous acceptez %{link}
           tos_title: Conditions d'utilisation
