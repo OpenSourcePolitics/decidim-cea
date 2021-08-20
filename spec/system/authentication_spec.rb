@@ -36,7 +36,7 @@ describe "Authentication", type: :system do
     context "when using another langage" do
       before do
         within_language_menu do
-          click_link "Castellano"
+          click_link "Français"
         end
       end
 
@@ -56,8 +56,8 @@ describe "Authentication", type: :system do
           find("*[type=submit]").click
         end
 
-        expect(page).to have_content("Se ha enviado un mensaje con un enlace de confirmación a tu dirección de correo electrónico. Por favor, sigue el enlace para activar tu cuenta.")
-        expect(last_user.locale).to eq("es")
+        expect(page).to have_content("Un message avec un lien de confirmation a été envoyé à votre adresse e-mail. Veuillez suivre le lien pour activer votre compte.")
+        expect(last_user.locale).to eq("fr")
       end
     end
 
