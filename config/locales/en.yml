@@ -34,10 +34,12 @@ en:
       registrations:
         new:
           already_have_an_account?: Already have an account?
+          birthdate: Birthdate
           newsletter: Newsletter
           newsletter_title: Newsletter title
           nickname_help: Nickname help
           password_help: Password help
+          postal_code: Postal code
           sign_in: Sign in
           sign_up: Sign up
           subtitle: Subtitle

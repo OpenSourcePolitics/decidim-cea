@@ -12,8 +12,8 @@ fr:
     admin:
       participatory_space_private_users:
         create:
-          error: Error
-          success: Success
+          error: Un problème est survenu lors de la création de l'utilisateur privé.
+          success: L'utilisateur privé a été créé avec succès.
     amendments:
       emendation:
         announcement:
@@ -33,18 +33,20 @@ fr:
     devise:
       registrations:
         new:
-          already_have_an_account?: Already have an account?
-          newsletter: Newsletter
-          newsletter_title: Newsletter title
-          nickname_help: Nickname help
-          password_help: Password help
-          sign_in: Sign in
-          sign_up: Sign up
-          subtitle: Subtitle
-          terms: Terms
-          tos_agreement: Tos agreement
-          tos_title: Tos title
-          username_help: Username help
+          already_have_an_account?: Vous avez déjà un compte ?
+          birthdate: Date de naissance
+          newsletter: Recevoir une newsletter sur l'actualité de la plateforme
+          newsletter_title: Autorisation de contact
+          nickname_help: Cet identifiant est public et unique sur %{organization} ; il permet aux autres utilisateurs de vous suivre, de vous contacter ou de vous mentionner dans leurs commentaires. Il s’affichera précédé d’un « @ » ; il ne doit pas contenir d’espace ni de caractère spécial.
+          password_help: "%{minimun_characters} caractères minimum, ne doit pas être trop commun (par exemple 123456) et doit être différent de votre pseudo et de votre email."
+          postal_code: Code postal
+          sign_in: S'identifier
+          sign_up: S'inscrire
+          subtitle:  Inscrivez-vous pour participer aux discussions et pour exprimer votre soutien aux propositions de votre choix.
+          terms: les termes et conditions d'utilisation.
+          tos_agreement: En vous inscrivant, vous acceptez %{link}
+          tos_title: Conditions d'utilisation
+          username_help: Le nom est public et apparaît dans votre profil et sur vos messages. Dans le but de garantir l'anonymat, vous pouvez choisir n'importe quel nom.
     verifications:
       authorizations:
         first_login:
@@ -56,7 +58,7 @@ fr:
       invited: Invited
     registrations:
       new:
-        sign_up: Sign up
+        sign_up: S'inscrire
   faker:
     address:
       country_code:
@@ -75,13 +77,13 @@ fr:
     decidim:
       footer:
         download_open_data: Données ouvertes
-        made_with_open_source: Made with open source
+        made_with_open_source: Site réalisé par <a href="https://opensourcepolitics.eu" target="_blank">Open Source Politics</a> grâce au logiciel libre <a target="_blank" href="https://github.com/decidim/decidim">logiciel libre Decidim</a>.
         revoke_cookies: Revoke cookies
       header:
-        close_menu: Close menu
+        close_menu: Fermer
         navigation: Navigation
-        sign_in: Sign in
-        sign_up: Sign up
+        sign_in: S'identifier
+        sign_up: S'inscrire
       user_menu:
         conversations: Conversations
         notifications: Notifications
