@@ -38,3 +38,21 @@ You're good to go!
 1. Fill in the required env vars.
 1. Create the app
 1. Enable Review Apps for this app (you'll need to create a Pipeline)
+
+
+
+## Machine translation configuration
+
+Machine translation is configured through the provider [DeepL](https://www.deepl.com) by using the gem https://github.com/wikiti/deepl-rb.
+
+In order to make it work these ENV variables need to be configured:
+
+```
+TRANSLATOR_API_KEY=*******
+TRANSLATOR_HOST=https://api-free.deepl.com
+```
+
+- Obtain the `TRANSLATOR_API_KEY` by creating an account at https://www.deepl.com/pro#developer
+- For `TRANSLATOR_HOST`, set it to `https://api-free.deepl.com` if using the "DeeL API Free" plan. If using the "DeepL API Pro", then set it to `https://api.deepl.com`
+
+> Note: you still need to enable machine translation at the organization settings.
