@@ -30,7 +30,7 @@ module Decidim
         expect(Decidim::MachineTranslationFieldsJob)
           .to have_been_enqueued
           .on_queue("default")
-          .exactly(2).times
+          .at_least(2).times
           .with(
             process,
             "title",
@@ -59,7 +59,7 @@ module Decidim
         expect(Decidim::MachineTranslationFieldsJob)
           .to have_been_enqueued
           .on_queue("default")
-          .exactly(2).times
+          .at_least(2).times
           .with(
             process,
             "title",
