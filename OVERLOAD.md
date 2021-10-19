@@ -39,3 +39,9 @@ From https://github.com/decidim/decidim/blob/release/0.23-stable/decidim-core/ap
  - **spec/commands/decidim/create_registration_spec.rb**
  - **spec/forms/registration_form_spec.rb**
  - **spec/system/authentication_spec.rb**
+ 
+ ## Remove version from proposal presenter (line 129)
+ - **app/views/decidim/proposals/proposals/show.html.erb**
+ ```ruby
+     <%= resource_version(proposal_presenter, versions_path: proposal_versions_path(@proposal)) %
+ ```
