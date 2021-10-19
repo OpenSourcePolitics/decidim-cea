@@ -9,6 +9,8 @@ fr:
       participatory_process:
         private_space: Espace privé
   decidim:
+    accessibility:
+      skip_button: Passer au contenu principal
     admin:
       participatory_space_private_users:
         create:
@@ -31,6 +33,13 @@ fr:
       osp_authorization_workflow:
         name: Procédure d'autorisation
     devise:
+      events:
+        budgets:
+          pending_order:
+            email_intro: Le vote sur le budget "%{resource_title}" n'est pas encore finalisé sur la concertation "%{participatory_space_title}".
+            email_outro: Vous avez reçu cette notification parce que vous avez commencé à voter sur la concertation "%{participatory_space_title}"
+            email_subject: Votre vote est toujours en attente sur la concertation %{participatory_space_title}
+            notification_title: Votre vote pour le budget <a href="%{resource_path}">%{resource_title}</a> attend d'être finalisé sur la concertation %{participatory_space_title}
       registrations:
         new:
           already_have_an_account?: Vous avez déjà un compte ?
@@ -65,7 +74,7 @@ fr:
             osp_authorization_workflow: Vérifier avec le formulaire de vérification de l'identité
   devise:
     failure:
-      invited: Invited
+      invited: Invité
     registrations:
       new:
         sign_up: S'inscrire
@@ -87,13 +96,13 @@ fr:
     decidim:
       footer:
         download_open_data: Données ouvertes
-        made_with_open_source: Site réalisé par <a href="https://opensourcepolitics.eu" target="_blank">Open Source Politics</a> grâce au logiciel libre <a target="_blank" href="https://github.com/decidim/decidim">logiciel libre Decidim</a>.
-        revoke_cookies: Revoke cookies
+        made_with_open_source: Site réalisé par <a target="_blank" href="https://opensourcepolitics.eu">Open Source Politics</a> grâce au <a target="_blank" href="https://github.com/decidim/decidim">logiciel libre Decidim</a>.
       header:
         close_menu: Fermer
         navigation: Navigation
-        sign_in: S'identifier
+        sign_in: Se connecter
         sign_up: S'inscrire
       user_menu:
+        account: Mon compte
         conversations: Conversations
         notifications: Notifications

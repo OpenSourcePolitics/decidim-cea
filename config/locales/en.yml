@@ -3,12 +3,14 @@ en:
   activemodel:
     attributes:
       osp_authorization_handler:
-        birthday: Date de naissance
-        document_number: Numéro unique
-        postal_code: Code postal
+        birthday: Birthday
+        document_number: Unique number
+        postal_code: Postal code
       participatory_process:
-        private_space: Espace privé
+        private_space: Private space
   decidim:
+    accessibility:
+      skip_button: Skip button
     admin:
       participatory_space_private_users:
         create:
@@ -18,18 +20,25 @@ en:
       emendation:
         announcement:
           evaluating: |-
-            Cet amendement pour le %{amendable_type} %{proposal_link}
-            est en cours d’évaluation.
+            This amendment for %{amendable_type} %{proposal_link}
+            is in evaluation state.
     authorization_handlers:
       osp_authorization_handler:
-        explanation: Vérifier votre identité en saisissant un numéro unique
+        explanation: Verify your identity by entering a unique number
         fields:
-          birthday: Date de naissance
-          document_number: Numéro unique
-          postal_code: Code postal
-        name: Formulaire de vérification d'identité
+          birthday: Birthday
+          document_number: Unique number
+          postal_code: Postal code
+        name: Identity Verification Form
       osp_authorization_workflow:
-        name: Procédure d'autorisation
+        name: Authorization procedure
+    events:
+      budgets:
+        pending_order:
+          email_intro: The vote on budget "%{resource_title}" is not confirmed yet in "%{participatory_space_title}".
+          email_outro: You have received this notification because you are participating in "%{participatory_space_title}"
+          email_subject: Your vote is still pending in %{participatory_space_title}
+          notification_title: The vote on budget <a href="%{resource_path}">%{resource_title}</a> is still waiting for your confirmation in %{participatory_space_title}
     devise:
       registrations:
         new:
@@ -61,25 +70,39 @@ en:
       authorizations:
         first_login:
           actions:
-            osp_authorization_handler: Vérifier avec le formulaire de vérification de l'identité
-            osp_authorization_workflow: Vérifier avec le formulaire de vérification de l'identité
+            osp_authorization_handler: Verify with the identity verification form
+            osp_authorization_workflow: Verify with the identity verification form
   devise:
     failure:
       invited: Invited
     registrations:
       new:
         sign_up: Sign up
+  faker:
+    address:
+      country_code:
+      - EN
+      - EN0
+      - EN1
+      - EN2
+      - EN3
+      - EN4
+      - EN5
+      - EN6
+      - EN7
+      - EN8
+      - EN9
   layouts:
     decidim:
       footer:
         download_open_data: Open data
-        made_with_open_source: Made with open source
-        revoke_cookies: Revoke cookies
+        made_with_open_source: Website made by <a target="_blank" href="https://opensourcepolitics.eu/en/">Open Source Politics</a> with the <a target="_blank" href="https://github.com/decidim/decidim">decidim free software</a>.
       header:
         close_menu: Close menu
         navigation: Navigation
         sign_in: Sign in
         sign_up: Sign up
       user_menu:
+        account: Account
         conversations: Conversations
         notifications: Notifications

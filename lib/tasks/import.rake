@@ -107,8 +107,10 @@ namespace :import do
         handler_name: "osp_authorization_handler",
         authorization: Decidim::AuthorizationHandler.handler_for(
           "osp_authorization_handler",
-          user: new_user,
-          document_number: id
+          {
+            user: new_user,
+            document_number: id
+          }
         )
       ).with_context(
         current_organization: current_organization,
@@ -150,8 +152,10 @@ namespace :import do
           Decidim::Authorization.create_or_update_from(
             Decidim::AuthorizationHandler.handler_for(
               "osp_authorization_handler",
-              user: user,
-              document_number: id
+              {
+                user: user,
+                document_number: id
+              }
             )
           )
           Rails.logger.debug I18n.t("participatory_space_private_users.create.success", scope: "decidim.admin")
