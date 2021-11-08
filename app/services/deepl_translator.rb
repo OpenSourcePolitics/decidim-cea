@@ -12,7 +12,8 @@ class DeeplTranslator
   end
 
   def translate
-    translation = DeepL.translate text, source_locale, target_locale
+    translation = deepl_translation text, source_locale, target_locale
+    return if translation.blank?
 
     Decidim::MachineTranslationSaveJob.perform_later(
       resource,
@@ -20,5 +21,18 @@ class DeeplTranslator
       target_locale,
       translation.text
     )
+  end
+
+  def deepl_translation(text, source_locale, target_locale)
+    begin
+      DeepL.translate text, source_locale, target_locale
+    rescue DeepL::Exceptions::RequestError => e
+      Rails.logger.debug '--- An error occurred on Deepl translation ---'
+      Rails.logger.debug "Deepl HTTP response code: #{e.response.code}"
+      Rails.logger.debug "Deepl HTTP response body: #{e.response.body}"
+      Rails.logger.debug "Deepl HTTP Request body: #{e.request.body}"
+      Rails.logger.debug "---------------------------------------------"
+      ""
+    end
   end
 end
