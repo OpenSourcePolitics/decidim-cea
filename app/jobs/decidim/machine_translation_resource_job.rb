@@ -16,6 +16,7 @@ module Decidim
     #   them to the job because the value gets lost when serializing the
     #   resource.
     # source_locale - A Symbol representing the source locale for the translation
+    # rubocop:disable Metrics/CyclomaticComplexity
     def perform(resource, previous_changes, source_locale)
       return unless Decidim.machine_translation_service_klass
 
@@ -48,6 +49,7 @@ module Decidim
       end
     end
 
+    # rubocop:enable Metrics/CyclomaticComplexity
     def default_locale_changed_or_translation_removed(previous_changes, field)
       default_locale = default_locale(@resource)
       values = previous_changes[field]
