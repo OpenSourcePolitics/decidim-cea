@@ -39,3 +39,10 @@ From https://github.com/decidim/decidim/blob/release/0.23-stable/decidim-core/ap
  - **spec/commands/decidim/create_registration_spec.rb**
  - **spec/forms/registration_form_spec.rb**
  - **spec/system/authentication_spec.rb**
+## Backport fix users_answers_serializer
+**PR #11**
+* `app/serializers/decidim/meetings/registration_serializer.rb`  
+Fix meetings registration serializer
+  
+* `lib/decidim/forms/user_answers_serializer.rb`  
+Fix UserAnswersSerializer for CSV exports

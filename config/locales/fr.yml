@@ -88,7 +88,6 @@ fr:
       footer:
         download_open_data: Données ouvertes
         made_with_open_source: Site réalisé par <a href="https://opensourcepolitics.eu" target="_blank">Open Source Politics</a> grâce au logiciel libre <a target="_blank" href="https://github.com/decidim/decidim">logiciel libre Decidim</a>.
-        revoke_cookies: Revoke cookies
       header:
         close_menu: Fermer
         navigation: Navigation

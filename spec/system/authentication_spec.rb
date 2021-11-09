@@ -22,6 +22,7 @@ describe "Authentication", type: :system do
           fill_in :registration_user_nickname, with: "responsible"
           fill_in :registration_user_password, with: "DfyvHn425mYAy2HL"
           fill_in :registration_user_password_confirmation, with: "DfyvHn425mYAy2HL"
+
           check :registration_user_tos_agreement
           check :registration_user_newsletter
           fill_in :registration_user_birthdate, with: "12/12/2021"
@@ -49,6 +50,7 @@ describe "Authentication", type: :system do
           fill_in :registration_user_nickname, with: "responsible"
           fill_in :registration_user_password, with: "DfyvHn425mYAy2HL"
           fill_in :registration_user_password_confirmation, with: "DfyvHn425mYAy2HL"
+
           check :registration_user_tos_agreement
           check :registration_user_newsletter
           fill_in :registration_user_birthdate, with: "12/12/2021"
@@ -72,6 +74,7 @@ describe "Authentication", type: :system do
           fill_in :registration_user_nickname, with: "responsible"
           fill_in :registration_user_password, with: "DfyvHn425mYAy2HL"
           fill_in :registration_user_password_confirmation, with: "DfyvHn425mYAy2HL"
+
           check :registration_user_tos_agreement
           check :registration_user_newsletter
           fill_in :registration_user_birthdate, with: "12/12/2021"
@@ -541,6 +544,7 @@ describe "Authentication", type: :system do
             fill_in :registration_user_nickname, with: "responsible"
             fill_in :registration_user_password, with: "DfyvHn425mYAy2HL"
             fill_in :registration_user_password_confirmation, with: "DfyvHn425mYAy2HL"
+
             check :registration_user_tos_agreement
             check :registration_user_newsletter
             fill_in :registration_user_birthdate, with: "12/12/2021"
