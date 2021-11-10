@@ -47,16 +47,6 @@ fr:
           tos_agreement: En vous inscrivant, vous acceptez %{link}
           tos_title: Conditions d'utilisation
           username_help: Le nom est public et apparaît dans votre profil et sur vos messages. Dans le but de garantir l'anonymat, vous pouvez choisir n'importe quel nom.
-    meetings:
-      meeting:
-        not_allowed: Vous n'êtes pas autorisé à vous inscrire à cette rencontre.
-      meetings:
-        create:
-          invalid: Il y a eu une erreur lors de la création de la rencontre.
-          success: La rencontre a été créée avec succès.
-        update:
-          invalid: Il y a eu une erreur lors de la mise à jour de la rencontre.
-          success: La rencontre a été mise à jour avec succès.
     verifications:
       authorizations:
         first_login:

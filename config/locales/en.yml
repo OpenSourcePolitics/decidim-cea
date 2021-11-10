@@ -47,16 +47,6 @@ en:
           tos_agreement: Tos agreement
           tos_title: Tos title
           username_help: Username help
-    meetings:
-      meeting:
-        not_allowed: Vous n'êtes pas autorisé à vous inscrire à cette rencontre.
-      meetings:
-        create:
-          invalid: Il y a eu une erreur lors de la création de la rencontre.
-          success: La rencontre a été créée avec succès.
-        update:
-          invalid: Il y a eu une erreur lors de la mise à jour de la rencontre.
-          success: La rencontre a été mise à jour avec succès.
     verifications:
       authorizations:
         first_login:
