@@ -1,8 +1,5 @@
 # List of overloaded files for specific needs in this repository
 
-## Backport meetings order
-- **app/controllers/decidim/meetings/meetings_controller.rb**
-
 ## Disable fast signup 
 - **config/initializers/devise.rb**
 Added:
