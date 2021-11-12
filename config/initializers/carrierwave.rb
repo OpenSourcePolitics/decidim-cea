@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 # Default CarrierWave setup.
-
 unless Rails.env.test?
   CarrierWave.configure do |config|
     config.permissions = 0o666
