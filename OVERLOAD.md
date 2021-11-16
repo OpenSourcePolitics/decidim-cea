@@ -1,5 +1,14 @@
 # List of overloaded files for specific needs in this repository
 
+## Reorder meetings indexes
+- **app/controllers/decidim/meetings/meetings_controller.rb**
+- **app/controllers/decidim/meetings/directory/meetings_controller.rb**
+```ruby
+def meetings
+ @meetings ||= paginate(search.results.order(start_time: params.dig("filter", "date")&.include?("past") ? :desc : :asc))
+end
+```
+
 ## Disable fast signup 
 - **config/initializers/devise.rb**
 Added:

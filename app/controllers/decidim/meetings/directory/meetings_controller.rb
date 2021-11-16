@@ -35,7 +35,7 @@ module Decidim
         private
 
         def meetings
-          @meetings ||= paginate(search.results.order(start_time: :asc))
+          @meetings ||= paginate(search.results.order(start_time: params.dig("filter", "date")&.include?("past") ? :desc : :asc))
         end
 
         def search_klass
@@ -63,9 +63,9 @@ module Decidim
 
         def meeting_components
           @meeting_components ||= Decidim::Component
-                                    .where(manifest_name: "meetings")
-                                    .where(participatory_space: participatory_spaces)
-                                    .published
+                                  .where(manifest_name: "meetings")
+                                  .where(participatory_space: participatory_spaces)
+                                  .published
         end
 
         def participatory_spaces
