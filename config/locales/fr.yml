@@ -47,6 +47,20 @@ fr:
           tos_agreement: En vous inscrivant, vous acceptez %{link}
           tos_title: Conditions d'utilisation
           username_help: Le nom est public et apparaît dans votre profil et sur vos messages. Dans le but de garantir l'anonymat, vous pouvez choisir n'importe quel nom.
+    meetings:
+      directory:
+        meetings:
+          index:
+            all: All
+      meeting:
+        not_allowed: Not allowed
+      meetings:
+        create:
+          invalid: Invalid
+          success: Success
+        update:
+          invalid: Invalid
+          success: Success
     verifications:
       authorizations:
         first_login:

@@ -47,6 +47,20 @@ en:
           tos_agreement: Tos agreement
           tos_title: Tos title
           username_help: Username help
+    meetings:
+      directory:
+        meetings:
+          index:
+            all: All
+      meeting:
+        not_allowed: Not allowed
+      meetings:
+        create:
+          invalid: Invalid
+          success: Success
+        update:
+          invalid: Invalid
+          success: Success
     verifications:
       authorizations:
         first_login:

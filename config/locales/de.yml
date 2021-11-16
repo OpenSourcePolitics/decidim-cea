@@ -1,12 +1,88 @@
 ---
 de:
+  activemodel:
+    attributes:
+      osp_authorization_handler:
+        birthday: Date de naissance
+        document_number: Numéro unique
+        postal_code: Code postal
+      participatory_process:
+        private_space: Espace privé
   decidim:
+    admin:
+      participatory_space_private_users:
+        create:
+          error: Error
+          success: Success
+    amendments:
+      emendation:
+        announcement:
+          evaluating: |-
+            Cet amendement pour le %{amendable_type} %{proposal_link}
+            est en cours d’évaluation.
+    authorization_handlers:
+      osp_authorization_handler:
+        explanation: Vérifier votre identité en saisissant un numéro unique
+        fields:
+          birthday: Date de naissance
+          document_number: Numéro unique
+          postal_code: Code postal
+        name: Formulaire de vérification d'identité
+      osp_authorization_workflow:
+        name: Procédure d'autorisation
     devise:
       registrations:
         new:
+          already_have_an_account?: Already have an account?
           birthdate: Geburtsdatum
+          newsletter: Newsletter
+          newsletter_title: Newsletter title
+          nickname_help: Nickname help
+          password_help: Password help
           postal_code: Postleitzahl
+          sign_in: Sign in
+          sign_up: Sign up
+          subtitle: Subtitle
+          terms: Terms
+          tos_agreement: Tos agreement
+          tos_title: Tos title
+          username_help: Username help
+    meetings:
+      directory:
+        meetings:
+          index:
+            all: All
+      meeting:
+        not_allowed: Not allowed
+      meetings:
+        create:
+          invalid: Invalid
+          success: Success
+        update:
+          invalid: Invalid
+          success: Success
+    verifications:
+      authorizations:
+        first_login:
+          actions:
+            osp_authorization_handler: Vérifier avec le formulaire de vérification de l'identité
+            osp_authorization_workflow: Vérifier avec le formulaire de vérification de l'identité
+  devise:
+    failure:
+      invited: Invited
+    registrations:
+      new:
+        sign_up: Sign up
   layouts:
     decidim:
       footer:
+        download_open_data: Open data
         made_with_open_source: Diese Website wurde von <a href="https://opensourcepolitics.eu" target="_blank">Open Source Politics</a> mit der freien Software <a target="_blank" href="https://github.com/decidim/decidim">logiciel libre Decidim</a> erstellt.
+      header:
+        close_menu: Close menu
+        navigation: Navigation
+        sign_in: Sign in
+        sign_up: Sign up
+      user_menu:
+        conversations: Conversations
+        notifications: Notifications
