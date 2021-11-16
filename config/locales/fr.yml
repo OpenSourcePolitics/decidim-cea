@@ -51,16 +51,16 @@ fr:
       directory:
         meetings:
           index:
-            all: All
+            all: Tous
       meeting:
-        not_allowed: Not allowed
+        not_allowed: Vous n'êtes pas autorisé à vous inscrire à cette rencontre.
       meetings:
         create:
-          invalid: Invalid
-          success: Success
+          invalid: Il y a eu une erreur lors de la création de la rencontre.
+          success: La rencontre a été créée avec succès.
         update:
-          invalid: Invalid
-          success: Success
+          invalid: Il y a eu une erreur lors de la mise à jour de la rencontre.
+          success: La rencontre a été mise à jour avec succès.
     verifications:
       authorizations:
         first_login:
