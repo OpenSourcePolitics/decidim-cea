@@ -83,6 +83,13 @@ translation:
 # Do not consider these keys missing:
 ignore_missing:
  - faker.*
+ - decidim.proposals.create.*
+ - decidim.proposals.proposals.compare.*
+ - decidim.proposals.publish.*
+ - decidim.proposals.update_draft.*
+ - decidim.proposals.destroy_draft.*
+ - decidim.proposals.update.*
+ - decidim.proposals.withdraw.*
 
 # Consider these keys used:
 ignore_unused:
