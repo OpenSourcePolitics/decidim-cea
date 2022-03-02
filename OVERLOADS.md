@@ -52,3 +52,39 @@ Fix meetings registration serializer
   
 * `lib/decidim/forms/user_answers_serializer.rb`  
 Fix UserAnswersSerializer for CSV exports
+* `app/models/decidim/proposals/proposal.rb`
+c83e979 - Fix geocoding and permissions, 2022-03-02
+
+* `app/jobs/decidim/machine_translation_resource_job.rb`
+3a60bb9 - Add logs on Deepl translation (#13), 2021-11-09
+
+* `app/controllers/decidim/proposals/proposals_controller.rb`
+81dcc75 - Fix rubocop offenses, 2022-03-02
+
+* `app/views/layouts/decidim/_head.html.erb`
+855706e - Add integrity and defer to assets (#14), 2021-11-23
+
+* `app/helpers/decidim/backup_helper.rb`
+3485952 - add backup tasks + new job scheduling, 2021-11-08
+
+* `app/services/deepl_translator.rb`
+3a60bb9 - Add logs on Deepl translation (#13), 2021-11-09
+
+* `app/services/decidim/s3_retention_service.rb`
+e2a1493 - fix rubocop offenses, 2021-11-08
+
+* `config/initializers/deepl.rb`
+fb80871 - Fix application db initialization, 2021-11-03
+
+* `lib/extends/commands/decidim/admin/create_participatory_space_private_user_extends.rb`
+dc827d2 - add tests (#2), 2021-08-19
+
+* `lib/extends/commands/decidim/admin/impersonate_user_extends.rb`
+dc827d2 - add tests (#2), 2021-08-19
+
+* `lib/decidim/participatory_processes/test/factories.rb`
+3a91e96 - Add and fix broken factory, 2021-11-29
+
+* `lib/helpers/decidim/dev/test/base_spec_helper.rb`
+9fa517b - Linting files, 2021-11-03
+
