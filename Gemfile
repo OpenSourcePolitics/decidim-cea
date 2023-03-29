@@ -33,6 +33,7 @@ gem "sprockets", "~> 3.7"
 gem "activejob-uniqueness", require: "active_job/uniqueness/sidekiq_patch"
 gem "fog-aws"
 gem "sys-filesystem"
+gem "rack-attack"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
