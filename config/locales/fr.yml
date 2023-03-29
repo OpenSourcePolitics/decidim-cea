@@ -20,6 +20,14 @@ fr:
           evaluating: |-
             Cet amendement pour le %{amendable_type} %{proposal_link}
             est en cours d’évaluation.
+    anonymous_proposals:
+      new_session: Connectez-vous
+      register: Inscrivez-vous
+      shared:
+        anonymous_proposals_announcement:
+          text_html: "<p><strong> %{registration_link} ou %{new_session_link} sur la plateforme pour ne rien manquer de la concertation</strong>. Si vous publiez votre proposition en tant qu'utilisateur connecté, vous pourrez suivre d'autres participants et interagir avec eux, commenter et échanger vos opinions sur chaque proposition, et soutenir les propositions que vous appréciez. Vous pourrez également décider de recevoir des notifications à chaque fois qu'une personne soutient ou commente votre proposition. En outre, vous aurez la possibilité de recevoir une newsletter avec toutes les mises à jour.</p> <p><em>« Mais je ne veux pas que mon nom soit reconnu »</em>: Dans ce cas, vous pouvez vous inscrire sous une identité anonyme avec laquelle vous pourrez publier votre proposition avec toutes les avantages d'être inscrit sur la plateforme.</p>"
+        anonymous_proposals_new_announcement:
+          text_html: "<p> Voulez-vous que d'autres participants vous suivent et commentent votre proposition ? <strong> %{registration_link} ou %{new_session_link} sur la plateforme</strong>.</p>"
     authorization_handlers:
       osp_authorization_handler:
         explanation: Vérifier votre identité en saisissant un numéro unique
@@ -30,6 +38,13 @@ fr:
         name: Formulaire de vérification d'identité
       osp_authorization_workflow:
         name: Procédure d'autorisation
+    components:
+      anonymous_proposals:
+        name: AnonymousProposals
+      proposals:
+        settings:
+          global:
+            anonymous_proposals_enabled: Autoriser les propositions anonymes
     devise:
       registrations:
         new:

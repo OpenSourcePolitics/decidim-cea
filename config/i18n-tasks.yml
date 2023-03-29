@@ -90,6 +90,9 @@ ignore_missing:
  - decidim.proposals.destroy_draft.*
  - decidim.proposals.update.*
  - decidim.proposals.withdraw.*
+ - decidim.anonymous_proposals.{new_session,register,shared.*}
+ - decidim.components.proposals.settings.global.anonymous_proposals_enabled
+ - decidim.components.anonymous_proposals.name
 
 # Consider these keys used:
 ignore_unused:
@@ -101,5 +104,8 @@ ignore_unused:
   - decidim.verifications.authorizations.first_login.actions.osp_authorization_workflow
   - activemodel.attributes.participatory_process.private_space
   - decidim.amendments.emendation.announcement.evaluating
+  - decidim.anonymous_proposals.{new_session,register,shared.*}
+  - decidim.components.proposals.settings.global.anonymous_proposals_enabled
+  - decidim.components.anonymous_proposals.name
 
 
