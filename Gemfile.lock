@@ -675,8 +675,8 @@ GEM
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.5.2)
-    rack (2.2.3)
-    rack-attack (6.5.0)
+    rack (2.2.6.4)
+    rack-attack (6.6.1)
       rack (>= 1.0, < 3)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
@@ -953,7 +953,7 @@ DEPENDENCIES
   newrelic_rpm
   passenger
   puma (~> 5.3.1)
-  rack-attack
+  rack-attack (~> 6.6)
   ruby-progressbar
   sendgrid-ruby
   sentry-rails
