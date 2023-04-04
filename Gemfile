@@ -8,12 +8,15 @@ DECIDIM_VERSION = { git: "https://github.com/decidim/decidim.git", branch: "rele
 
 gem "decidim", DECIDIM_VERSION
 
+gem "decidim-anonymous_proposals", git: "https://github.com/PopulateTools/decidim-module-anonymous_proposals", branch: "release/0.24-stable"
 gem "decidim-decidim_awesome", "~> 0.7.0"
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", branch: "master"
 
 gem "bootsnap", "~> 1.4"
 
 gem "dotenv-rails"
+
+gem "globalid", "~> 1.0"
 
 gem "puma", "~> 5.3.1"
 gem "uglifier", "~> 4.1"
@@ -29,6 +32,7 @@ gem "sprockets", "~> 3.7"
 
 gem "activejob-uniqueness", require: "active_job/uniqueness/sidekiq_patch"
 gem "fog-aws"
+gem "rack-attack", "~> 6.6"
 gem "sys-filesystem"
 
 group :development, :test do
