@@ -115,3 +115,9 @@ fr:
       user_menu:
         conversations: Conversations
         notifications: Notifications
+  rack_attack:
+    too_many_requests:
+      message: Il semblerait que vous fassiez trop de requetes sur notre serveur, votre connexion a ete ralentie.
+      time: 'Vous pourrez naviguer de nouveau sur notre plateforme dans :'
+      time_unit: secondes
+      title: Merci pour votre participation sur %{organization_name}

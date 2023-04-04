@@ -107,5 +107,5 @@ ignore_unused:
   - decidim.anonymous_proposals.{new_session,register,shared.*}
   - decidim.components.proposals.settings.global.anonymous_proposals_enabled
   - decidim.components.anonymous_proposals.name
-
+  - rack_attack.too_many_requests.{message,time,time_unit,title}
 
