@@ -104,4 +104,35 @@ jobs:
           database_username: ${{ env.DATABASE_USERNAME }}
           database_password: ${{ env.DATABASE_PASSWORD }}
           database_host: ${{ env.DATABASE_HOST }}
+  build_and_push_image_dev:
+    name: Build and push image to Registry
+    if: "github.ref == 'refs/heads/develop'"
+    needs: [ lint, tests, system_tests, test_build ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: OpenSourcePolitics/build-and-push-images-action@master
+        with:
+          registry: ${{ vars.REGISTRY_ENDPOINT }}
+          namespace: ${{ vars.REGISTRY_NAMESPACE }}
+          password: ${{ secrets.TOKEN }}
+          image_name: ${{ vars.IMAGE_NAME }}
+          tag: "develop-${{ github.sha }}"
+  generate_release:
+    name: Generate release
+    needs: [ lint, tests, system_tests, test_build ]
+    if: "github.ref == 'refs/heads/master'"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Bump version and push tag
+        id: tag_version
+      - uses: mathieudutour/github-tag-action@v6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: ncipollo/release-action@v1
+        name: Create a GitHub release
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
 
