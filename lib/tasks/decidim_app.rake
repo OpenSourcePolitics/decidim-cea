@@ -14,4 +14,3 @@ namespace :decidim_app do
     Decidim::SystemAdminCreator.create!(ENV) ? puts("System admin created successfully") : puts("System admin creation failed")
   end
 end
-
