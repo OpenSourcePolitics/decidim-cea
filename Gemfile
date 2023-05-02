@@ -38,7 +38,6 @@ gem "sys-filesystem"
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
   gem "climate_control", "~> 1.2"
-
   gem "decidim-dev", DECIDIM_VERSION
 end
 
