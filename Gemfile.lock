@@ -339,6 +339,7 @@ GEM
     chef-utils (17.7.22)
       concurrent-ruby
     childprocess (3.0.0)
+    climate_control (1.2.0)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     coffee-rails (5.0.0)
@@ -936,6 +937,7 @@ DEPENDENCIES
   activejob-uniqueness
   bootsnap (~> 1.4)
   byebug (~> 11.0)
+  climate_control (~> 1.2)
   dalli
   decidim!
   decidim-anonymous_proposals!
@@ -969,7 +971,7 @@ DEPENDENCIES
   web-console (~> 3.5)
 
 RUBY VERSION
-   ruby 2.7.5p203
+   ruby 2.7.1p83
 
 BUNDLED WITH
-   2.4.9
+   2.3.26
