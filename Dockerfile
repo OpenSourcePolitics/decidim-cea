@@ -21,7 +21,6 @@ RUN bundle config set --local without 'development test' && bundle install
 
 COPY package* ./
 COPY yarn.lock .
-COPY packages packages
 RUN yarn install
 
 COPY . .
