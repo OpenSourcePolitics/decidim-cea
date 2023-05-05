@@ -25,8 +25,7 @@ RUN yarn install
 
 COPY . .
 
-RUN bundle exec bootsnap precompile --gemfile app/ lib/ config/ bin/ db/  \
-RUN bundle exec rake assets:precompile
+RUN bundle exec bootsnap precompile --gemfile app/ lib/ config/ bin/ db/ && bundle exec rails assets:precompile
 
 # Configure endpoint.
 COPY ./entrypoint.sh /usr/bin/
