@@ -10,7 +10,6 @@ jobs:
     name: Build and push image to Registry
     runs-on: ubuntu-latest
     steps:
-
       - uses: OpenSourcePolitics/build-and-push-images-action@master
         with:
           registry: ${{ vars.REGISTRY_ENDPOINT }}
