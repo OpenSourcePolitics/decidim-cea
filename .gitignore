@@ -24,7 +24,34 @@
 public/uploads
 public/assets
 
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# Ignore .env file
 .env
 
 # Ignore git status file
-git-status.txt 
+git-status.txt
+
+/public/decidim-packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore vendor/cache
+vendor/cache
+
+# Ignore RSpec failures
+.rspec-failures
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+.idea
+coverage/
