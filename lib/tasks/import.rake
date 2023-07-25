@@ -81,7 +81,6 @@ namespace :import do
 
     def import_data(id, first_name, last_name, email)
       # Extends are only loaded at the last time
-      require "extends/commands/decidim/admin/create_participatory_space_private_user_extends"
       require "extends/commands/decidim/admin/impersonate_user_extends"
 
       if email.nil?
