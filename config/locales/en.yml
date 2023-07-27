@@ -59,6 +59,9 @@ en:
     registrations:
       new:
         sign_up: Sign up
+    shared:
+      links:
+        sign_in_with_provider: Sign in with %{provider}
   layouts:
     decidim:
       footer:

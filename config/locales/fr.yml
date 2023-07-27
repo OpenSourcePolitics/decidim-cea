@@ -74,6 +74,9 @@ fr:
     registrations:
       new:
         sign_up: S'inscrire
+    shared:
+      links:
+        sign_in_with_provider: S'identifier avec %{provider}
   faker:
     address:
       country_code:

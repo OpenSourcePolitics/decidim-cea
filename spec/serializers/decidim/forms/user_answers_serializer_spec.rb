@@ -92,7 +92,7 @@ module Decidim
           )
 
           expect(serialized).to include(
-            "#{singlechoice_question.position + 1}. #{translated(singlechoice_question.body, locale: I18n.locale)}" => ["Free text"]
+            "#{singlechoice_question.position + 1}. #{translated(singlechoice_question.body, locale: I18n.locale)}" => ["#{translated(singlechoice_answer_choice.body)} (Free text)"]
           )
 
           expect(serialized).to include(

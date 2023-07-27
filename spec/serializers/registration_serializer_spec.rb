@@ -98,7 +98,7 @@ module Decidim::Meetings
             "#{singlechoice_question.position + 1}. #{translated(singlechoice_question.body, locale: I18n.locale)}" => [singlechoice_answer_choice.body]
           )
           expect(serialized[:registration_form_answers]).to include(
-            "#{singlechoice_free_question.position + 1}. #{translated(singlechoice_free_question.body, locale: I18n.locale)}" => ["Free text answer"]
+            "#{singlechoice_free_question.position + 1}. #{translated(singlechoice_free_question.body, locale: I18n.locale)}" => ["#{singlechoice_free_answer_choice.body} (Free text answer)"]
           )
         end
       end
