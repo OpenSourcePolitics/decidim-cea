@@ -29,7 +29,7 @@ module Decidim
 
         expect(Decidim::MachineTranslationFieldsJob)
           .to have_been_enqueued
-          .on_queue("default")
+          .on_queue("translations")
           .at_least(2).times
           .with(
             process,
@@ -41,7 +41,7 @@ module Decidim
       end
     end
 
-    describe "when default loacle of translatable field isn't changed" do
+    describe "when default locale of translatable field isn't changed" do
       before do
         updated_title = { en: "New Title", es: "título actualizado" }
         process.update(title: updated_title)
@@ -56,7 +56,7 @@ module Decidim
         )
         expect(Decidim::MachineTranslationFieldsJob)
           .not_to have_been_enqueued
-          .on_queue("default")
+          .on_queue("translations")
       end
     end
 
@@ -75,7 +75,7 @@ module Decidim
         )
         expect(Decidim::MachineTranslationFieldsJob)
           .to have_been_enqueued
-          .on_queue("default")
+          .on_queue("translations")
           .exactly(1).times
           .with(
             process,

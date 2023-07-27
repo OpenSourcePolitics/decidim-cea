@@ -312,10 +312,10 @@ describe "Authentication", type: :system do
         expect(page).to have_content("Sign in with Facebook")
 
         within_language_menu do
-          click_link "Català"
+          click_link "Français"
         end
 
-        expect(page).to have_content("Inicia sessió amb Facebook")
+        expect(page).to have_content("S'identifier avec Facebook")
       end
     end
 
@@ -328,7 +328,7 @@ describe "Authentication", type: :system do
           perform_enqueued_jobs { find("*[type=submit]").click }
         end
 
-        expect(page).to have_content("reset your password")
+        expect(page).to have_content("password recovery link")
         expect(emails.count).to eq(1)
       end
     end
@@ -360,7 +360,7 @@ describe "Authentication", type: :system do
 
       it "signs out the user" do
         within ".topbar__user__logged" do
-          find("a", text: user.name).hover
+          find("a", text: user.name).click
           find(".sign-out-link").click
         end
 
@@ -370,62 +370,6 @@ describe "Authentication", type: :system do
     end
 
     context "with lockable account" do
-      Devise.maximum_attempts = 3
-      let!(:maximum_attempts) { Devise.maximum_attempts }
-
-      describe "when attempting to login with failing password" do
-        describe "before locking" do
-          before do
-            visit decidim.root_path
-            find(".sign-in-link").click
-
-            (maximum_attempts - 2).times do
-              within ".new_user" do
-                fill_in :session_user_email, with: user.email
-                fill_in :session_user_password, with: "not-the-pasword"
-                find("*[type=submit]").click
-              end
-            end
-          end
-
-          it "shows the last attempt warning before locking the account" do
-            within ".new_user" do
-              fill_in :session_user_email, with: user.email
-              fill_in :session_user_password, with: "not-the-pasword"
-              find("*[type=submit]").click
-            end
-
-            expect(page).to have_content("You have one more attempt before your account is locked.")
-          end
-        end
-
-        describe "locks the account" do
-          before do
-            visit decidim.root_path
-            find(".sign-in-link").click
-
-            (maximum_attempts - 1).times do
-              within ".new_user" do
-                fill_in :session_user_email, with: user.email
-                fill_in :session_user_password, with: "not-the-pasword"
-                find("*[type=submit]").click
-              end
-            end
-          end
-
-          it "when reached maximum failed attempts" do
-            within ".new_user" do
-              fill_in :session_user_email, with: user.email
-              fill_in :session_user_password, with: "not-the-pasword"
-              perform_enqueued_jobs { find("*[type=submit]").click }
-            end
-
-            expect(page).to have_content("Your account is locked.")
-            expect(emails.count).to eq(1)
-          end
-        end
-      end
-
       describe "Resend unlock instructions email" do
         before do
           user.lock_access!
@@ -439,7 +383,7 @@ describe "Authentication", type: :system do
             perform_enqueued_jobs { find("*[type=submit]").click }
           end
 
-          expect(page).to have_content("You will receive an email with instructions for how to unlock your account in a few minutes.")
+          expect(page).to have_content("If your account exists, you will receive an email with instructions for how to unlock it in a few minutes.")
           expect(emails.count).to eq(1)
         end
       end

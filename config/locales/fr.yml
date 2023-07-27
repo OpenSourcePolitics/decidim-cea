@@ -62,20 +62,6 @@ fr:
           tos_agreement: En vous inscrivant, vous acceptez %{link}
           tos_title: Conditions d'utilisation
           username_help: Le nom est public et apparaît dans votre profil et sur vos messages. Dans le but de garantir l'anonymat, vous pouvez choisir n'importe quel nom.
-    meetings:
-      directory:
-        meetings:
-          index:
-            all: Tous
-      meeting:
-        not_allowed: Vous n'êtes pas autorisé à vous inscrire à cette rencontre.
-      meetings:
-        create:
-          invalid: Il y a eu une erreur lors de la création de la rencontre.
-          success: La rencontre a été créée avec succès.
-        update:
-          invalid: Il y a eu une erreur lors de la mise à jour de la rencontre.
-          success: La rencontre a été mise à jour avec succès.
     verifications:
       authorizations:
         first_login:
@@ -105,16 +91,7 @@ fr:
   layouts:
     decidim:
       footer:
-        download_open_data: Données ouvertes
         made_with_open_source: Site réalisé par <a href="https://opensourcepolitics.eu" target="_blank">Open Source Politics</a> grâce au logiciel libre <a target="_blank" href="https://github.com/decidim/decidim">logiciel libre Decidim</a>.
-      header:
-        close_menu: Fermer
-        navigation: Navigation
-        sign_in: S'identifier
-        sign_up: S'inscrire
-      user_menu:
-        conversations: Conversations
-        notifications: Notifications
   rack_attack:
     too_many_requests:
       message: Il semblerait que vous fassiez trop de requetes sur notre serveur, votre connexion a ete ralentie.
