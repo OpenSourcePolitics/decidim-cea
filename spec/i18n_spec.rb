@@ -4,7 +4,7 @@ require "i18n/tasks"
 
 describe "I18n sanity" do
   let(:locales) do
-    ENV["ENFORCED_LOCALES"].presence || "en,fr"
+    ENV["ENFORCED_LOCALES"].presence || "en,fr,de"
   end
 
   let(:i18n) { I18n::Tasks::BaseTask.new(locales: locales.split(",")) }

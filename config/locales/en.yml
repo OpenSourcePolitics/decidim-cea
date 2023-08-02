@@ -47,20 +47,6 @@ en:
           tos_agreement: Tos agreement
           tos_title: Tos title
           username_help: Username help
-    meetings:
-      directory:
-        meetings:
-          index:
-            all: All
-      meeting:
-        not_allowed: You are not allowed to view this meeting
-      meetings:
-        create:
-          invalid: There was a problem creating this meeting.
-          success: You have created the meeting successfully.
-        update:
-          invalid: There was a problem updating the meeting.
-          success: You have updated the meeting successfully.
     verifications:
       authorizations:
         first_login:
@@ -73,19 +59,13 @@ en:
     registrations:
       new:
         sign_up: Sign up
+    shared:
+      links:
+        sign_in_with_provider: Sign in with %{provider}
   layouts:
     decidim:
       footer:
-        download_open_data: Open data
         made_with_open_source: Made with open source
-      header:
-        close_menu: Close menu
-        navigation: Navigation
-        sign_in: Sign in
-        sign_up: Sign up
-      user_menu:
-        conversations: Conversations
-        notifications: Notifications
   rack_attack:
     too_many_requests:
       message: Your connection has been slowed because server received too many requests.

@@ -15,7 +15,7 @@ module Decidim
         let(:password_confirmation) { password }
         let(:tos_agreement) { "1" }
         let(:newsletter) { "1" }
-        let(:current_locale) { "es" }
+        let(:current_locale) { "fr" }
         let(:birthdate) { "12/12/2021" }
         let(:postal_code) { "75020" }
 
@@ -46,7 +46,7 @@ module Decidim
 
         describe "when the form is not valid" do
           before do
-            allow(form).to receive(:invalid?).and_return(true)
+            expect(form).to receive(:invalid?).and_return(true)
           end
 
           it "broadcasts invalid" do
@@ -74,7 +74,7 @@ module Decidim
               end.to change(User, :count).by(0)
                                          .and broadcast(:invalid)
                 .and change(user.reload, :invitation_token)
-              expect(ActionMailer::DeliveryJob).to have_been_enqueued.on_queue("mailers")
+              expect(ActionMailer::MailDeliveryJob).to have_been_enqueued.on_queue("mailers")
             end
           end
         end
